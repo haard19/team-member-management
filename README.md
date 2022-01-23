@@ -47,6 +47,7 @@ python manage.py runserver
 The commands to start React.js frontend application:
 
 ```bash
+cd frontend
 npm run dev
 ```
 
