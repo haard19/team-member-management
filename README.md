@@ -49,3 +49,5 @@ The commands to start React.js frontend application:
 ```bash
 npm run dev
 ```
+
+After commands in both the terminals run successfully, the output (web application) can be accessed by accessing **127.0.0.1:8000** URL in any browser.

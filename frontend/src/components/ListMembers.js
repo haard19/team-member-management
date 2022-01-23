@@ -13,6 +13,7 @@ export default class ListMembers extends Component {
         return (
             <Router>
                 <Switch>
+                    <Route exact path='/' component={ListAllMembers} />
                     <Route path='/list' component={ListAllMembers} />
                     <Route path="/add" component={AddMember} />
                     <Route path="/edit/:id" component={EditMember} />
