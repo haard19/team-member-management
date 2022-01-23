@@ -18,7 +18,7 @@ export default class AddMember extends Component {
             lastName: "",
             email: "",
             phone: "",
-            role: true,
+            role: false,
         };
         this.handleAddMemberButton = this.handleAddMemberButton.bind(this);
         this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -53,8 +53,9 @@ export default class AddMember extends Component {
     }
 
     handleRoleChange(e) {
+        console.log(e.target.value);
         this.setState({
-            role: e.target.value === "true" ? true : false,
+            role: e.target.value == "true" ? true : false,
         });
     }
 
@@ -73,6 +74,7 @@ export default class AddMember extends Component {
                 role: this.state.role
             })
         };
+        console.log(requestOpts);
         fetch('backend/add/', requestOpts).then((response) => response.json()).then((data) => console.log(data));
         setTimeout(() => {
             this.props.history.push("/list")
